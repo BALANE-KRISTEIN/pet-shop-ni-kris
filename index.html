@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,44 +7,114 @@
     <style>
         body {
             background-color: lightgreen;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+        article {
+            margin: 30px auto;
+            max-width: 700px;
         }
 
         article img {
             width: 250px;
             height: 250px;
             object-fit: cover;
+            display: block;
+            margin: 15px auto;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Pet shop ni Kris</h1>
-<p>This is a shop where you will find your unexpected pets, We also offer and promotes free Adoptions.</p>
+    <header>
+
+        <h1>Pet Shop ni Kris</h1>
+
+        <p>
+            This is a shop where you will find your unexpected pets.
+            We also offer and promote free adoptions.
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
 
 
-<article>
-  <h3>Jumping Spider</h3>
-  <p>P 900</p>
-  <p>A Jumping Spider as your emotional support, he can be your comapanion.</p>
-  <img src="Hello mun_____.jpg" alt="Jumping Spider">
-</article>
+    <main>
 
-<article>
-  <h4>LionRodent</h4>
-  <p>P 1,000,000</p>
-  <p>Yes, it is a Lion but not the diet? You will have to buy a lot of celeries</p>
-  <img src="GuieneLion.jpg" alt="LionRodent">
-</article>
+        <article>
+            <h2>Jumping Spider</h2>
 
-<article>
-  <h5>Unknown</h5>
-  <p>Free</p>
-  <p>It's free for a reason, We still doesn't know what this is.
-    Warning: Make sure you have a Life Insurace
-  </p>
-  <img src="Ano to.jpg" alt="Unknown Species">
-</article>
+            <p>P 900</p>
+
+            <p>
+                A Jumping Spider as your emotional support,
+                he can be your companion.
+            </p>
+
+            <img src="Hello mun_____.jpg" alt="Jumping Spider">
+        </article>
+
+
+        <article>
+            <h2>LionRodent</h2>
+
+            <p>P 1,000,000</p>
+
+            <p>
+                Yes, it is a Lion but not the diet?
+                You will have to buy a lot of celeries.
+            </p>
+
+            <img src="GuieneLion.jpg" alt="LionRodent">
+        </article>
+
+
+        <article>
+            <h2>Unknown</h2>
+
+            <p>Free</p>
+
+            <p>
+                It's free for a reason. We still don't know what this is.
+                <br>
+                Warning: Make sure you have Life Insurance.
+            </p>
+
+            <img src="Ano to.jpg" alt="Unknown Species">
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>&copy; 2026 Pet Shop ni Kris. All Rights Reserved.</p>
+
+    </footer>
 
 </body>
 </html>
+```

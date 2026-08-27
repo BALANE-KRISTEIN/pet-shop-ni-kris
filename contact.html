@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - My Shop</title>
+    <title>Contact - Pet Shop ni Kris</title>
 
     <style>
         body {
@@ -26,9 +24,46 @@
             text-decoration: none;
         }
 
-        section {
+        form {
+            width: 500px;
             margin: 30px auto;
-            max-width: 800px;
+        }
+
+        fieldset {
+            padding: 25px;
+            border: 2px solid black;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -37,7 +72,12 @@
 
     <header>
 
-        <h1>Contact Our Shop</h1>
+        <h1>Pet Shop ni Kris</h1>
+
+        <p>
+            This is a shop where you will find your unexpected pets.
+            We also offer and promote free adoptions.
+        </p>
 
         <nav>
             <ul>
@@ -52,61 +92,100 @@
 
     <main>
 
-        <section>
+        <h2>Contact Us</h2>
 
-            <h2>Get in Touch</h2>
-
-            <p>
-                If you have any questions about our pets, products,
-                or free adoptions, feel free to contact us.
-            </p>
-
-        </section>
+        <p>
+            Have a question about our pets or adoption?
+            Send us a message using the form below.
+        </p>
 
 
-        <section>
+        <form action="#" method="post">
 
-            <h2>Contact Information</h2>
+            <fieldset>
 
-            <p>
-                📧 Email: krisanimalshop@gmail.com
-            </p>
-
-            <p>
-                📱 Phone: 0912-345-6789
-            </p>
-
-            <p>
-                📘 Facebook: Pet Shop ni Kris
-            </p>
-
-        </section>
+                <legend>Your Details</legend>
 
 
-        <section>
+                <label for="name">Name</label>
 
-            <h2>Visit Us</h2>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
 
-            <p>
-                📍 Philippines
-            </p>
 
-            <p>
-                We would be happy to answer your questions
-                and help you find your unexpected pet!
-            </p>
+                <label for="email">Email</label>
 
-        </section>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="subject">Subject</label>
+
+                <select
+                    id="subject"
+                    name="subject"
+                    required
+                >
+
+                    <option value="">Choose a subject</option>
+
+                    <option value="product-question">
+                        Product Question
+                    </option>
+
+                    <option value="adoption">
+                        Adoption Inquiry
+                    </option>
+
+                    <option value="pet-information">
+                        Pet Information
+                    </option>
+
+                    <option value="other">
+                        Something Else
+                    </option>
+
+                </select>
+
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Send message
+                </button>
+
+            </fieldset>
+
+        </form>
 
     </main>
 
 
     <footer>
 
-        <p>&copy; 2026 Pet Shop ni Kris. All Rights Reserved.</p>
+        <p>
+            &copy; 2026 Pet Shop ni Kris. All Rights Reserved.
+        </p>
 
     </footer>
 
 </body>
 </html>
-```

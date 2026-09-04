@@ -9,12 +9,11 @@
     --red: #8f3d36;
 }
 
-/* RESET */
+/* BASE STYLES */
 * {
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     margin: 0;
     padding: 30px;
@@ -35,7 +34,6 @@ header {
     border-left: 8px solid var(--red);
 }
 
-/* MAIN TITLE */
 h1 {
     margin: 0 0 10px;
     color: var(--dirty-white);
@@ -44,7 +42,6 @@ h1 {
     text-transform: uppercase;
 }
 
-/* DESCRIPTION */
 header p {
     color: var(--beige);
 }
@@ -74,7 +71,6 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
 nav a:hover {
@@ -88,44 +84,56 @@ main {
     margin: auto;
 }
 
-/* PRODUCT CARDS */
+
+
+.product-card,
 article {
     background-color: var(--black);
-    border: 1px solid var(--gray);
-    border-left: 6px solid var(--green);
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 24px;
+    border-left: 8px solid var(--green);
+    margin-bottom: 30px;
     transition: 0.3s;
 }
 
-
+/* PRODUCT CARD HOVER */
+.product-card:hover,
 article:hover {
     border-left-color: var(--red);
     transform: translateX(5px);
     box-shadow: 8px 8px 0 var(--dark-green);
 }
 
-/* PRODUCT TITLES */
+/* PRODUCT NAMES */
+.product-card h2,
+.product-card h3,
+.product-card h4,
+.product-card h5,
 article h2,
 article h3,
 article h4,
 article h5 {
     margin-top: 0;
     color: var(--dirty-white);
-    font-size: 28px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* PRODUCT DESCRIPTION */
+.product-card p,
+article p {
+    color: var(--beige);
 }
 
 /* PRICE */
 .price {
     color: var(--red);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* IMAGES */
+/* PRODUCT IMAGES */
 img {
     display: block;
     width: 100%;
@@ -136,38 +144,32 @@ img {
     filter: contrast(1.1) saturate(0.8);
 }
 
-/* PRODUCT PARAGRAPHS */
-article p {
-    color: var(--beige);
-}
-
-/* BUTTONS AND PRODUCT LINKS */
+/* PRODUCT BUTTON */
+.product-card a,
 article a {
     display: inline-block;
     padding: 12px 22px;
     background-color: var(--dirty-white);
     color: var(--black);
-    border: 2px solid var(--dirty-white);
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
+.product-card a:hover,
 article a:hover {
     background-color: var(--red);
     color: var(--dirty-white);
-    border-color: var(--red);
 }
 
-/* SECTIONS */
+
 section {
     max-width: 900px;
     margin: 30px auto;
     padding: 30px;
     background-color: var(--black);
-    border: 1px solid var(--gray);
-    border-left: 6px solid var(--green);
+    border-radius: 12px;
+    border-left: 8px solid var(--green);
 }
 
 section h2 {
@@ -175,7 +177,8 @@ section h2 {
     text-transform: uppercase;
 }
 
-/* FORMS */
+
+
 form {
     max-width: 850px;
     margin: auto;
@@ -184,13 +187,15 @@ form {
 fieldset {
     margin-bottom: 25px;
     padding: 25px;
-    background-color: var(--dark);
+    background-color: var(--black);
     border: 2px solid var(--green);
+    border-radius: 12px;
 }
 
 legend {
     padding: 0 10px;
     color: var(--dirty-white);
+    background-color: var(--dark);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -203,24 +208,27 @@ label {
     font-weight: bold;
 }
 
-/* INPUTS */
-input,
+/* INPUTS AND TEXTAREA */
+input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
     width: 100%;
-    margin-top: 7px;
     padding: 12px;
-    background-color: var(--black);
+    margin-top: 7px;
+    background-color: var(--dark);
     color: var(--dirty-white);
     border: 1px solid var(--gray);
+    border-radius: 6px;
     font-family: Arial, sans-serif;
 }
 
+/* VISIBLE FOCUS STATE */
 input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid var(--green);
-    border-color: var(--green);
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+    border-color: var(--red);
 }
 
 /* RADIO AND CHECKBOX */
@@ -228,6 +236,7 @@ input[type="radio"],
 input[type="checkbox"] {
     width: auto;
     margin-right: 8px;
+    accent-color: var(--red);
 }
 
 /* SUBMIT BUTTON */
@@ -239,15 +248,15 @@ input[type="submit"] {
     background-color: var(--red);
     color: var(--dirty-white);
     border: 2px solid var(--red);
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
 button:hover,
 input[type="submit"]:hover {
-    background-color: transparent;
+    background-color: var(--black);
     border-color: var(--dirty-white);
 }
 
@@ -270,11 +279,6 @@ footer {
 
     h1 {
         font-size: 32px;
-    }
-
-    article,
-    section {
-        padding: 20px;
     }
 
     nav li {

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Order Enquiry - Pet Shop ni Kris</title>
 
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
-    <header>
+
+    <!-- HEADER -->
+
+    <header class="site-header">
 
         <h1>Pet Shop ni Kris</h1>
 
-        <p>
-            This is a shop where you will find your unexpected pets.
-            We also offer and promote free adoptions.
-        </p>
 
         <nav>
+
             <ul>
+
                 <li>
                     <a href="../index.html">Home</a>
                 </li>
@@ -30,32 +39,51 @@
                 <li>
                     <a href="../contact.html">Contact</a>
                 </li>
+
+                <li>
+                    <a href="../suggest.html">Suggest a Pet</a>
+                </li>
+
             </ul>
+
         </nav>
 
     </header>
 
 
+
+    <!-- MAIN CONTENT -->
+
     <main>
 
-        <section>
+
+        <section class="product-card">
+
 
             <h2>Order Enquiry</h2>
+
 
             <p>
                 Interested in one of our pets?
                 Fill out the form below to send us an order enquiry.
             </p>
 
+
+
             <form>
+
+
+                <!-- ORDER DETAILS -->
 
                 <fieldset>
 
                     <legend>Order Details</legend>
 
+
                     <label for="quantity">
                         Quantity:
                     </label>
+
 
                     <input
                         type="number"
@@ -67,11 +95,16 @@
                     >
 
 
+
+                    <!-- DELIVERY METHOD -->
+
                     <fieldset>
 
                         <legend>Delivery Method</legend>
 
+
                         <label>
+
                             <input
                                 type="radio"
                                 id="pickup"
@@ -79,93 +112,147 @@
                                 value="pickup"
                                 required
                             >
+
                             Pick-up
+
                         </label>
 
+
+                        <br>
+
+
                         <label>
+
                             <input
                                 type="radio"
                                 id="delivery"
                                 name="delivery"
                                 value="delivery"
                             >
+
                             Home Delivery
+
                         </label>
 
+
+                        <br>
+
+
                         <label>
+
                             <input
                                 type="radio"
                                 id="meetup"
                                 name="delivery"
                                 value="meetup"
                             >
+
                             Meet-up
+
                         </label>
+
 
                     </fieldset>
 
+
+
+                    <!-- OPTIONAL EXTRAS -->
 
                     <fieldset>
 
                         <legend>Optional Extras</legend>
 
+
                         <label>
+
                             <input
                                 type="checkbox"
                                 id="food"
                                 name="extras"
                                 value="food"
                             >
+
                             Pet Food
+
                         </label>
 
+
+                        <br>
+
+
                         <label>
+
                             <input
                                 type="checkbox"
                                 id="cage"
                                 name="extras"
                                 value="cage"
                             >
+
                             Pet Cage
+
                         </label>
 
+
+                        <br>
+
+
                         <label>
+
                             <input
                                 type="checkbox"
                                 id="supplies"
                                 name="extras"
                                 value="supplies"
                             >
+
                             Pet Supplies
+
                         </label>
+
 
                     </fieldset>
 
+
+
+                    <!-- EMAIL -->
 
                     <label for="email">
                         Contact Email:
                     </label>
 
+
                     <input
                         type="email"
                         id="email"
                         name="email"
+                        placeholder="example@email.com"
                         required
                     >
 
+
                 </fieldset>
 
+
+
+                <!-- SUBMIT BUTTON -->
 
                 <button type="submit">
                     Send Order Enquiry
                 </button>
 
+
             </form>
+
 
         </section>
 
+
     </main>
 
+
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -175,5 +262,7 @@
 
     </footer>
 
+
 </body>
+
 </html>

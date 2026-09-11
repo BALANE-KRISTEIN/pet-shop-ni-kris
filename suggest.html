@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suggest a Pet - Pet Shop ni Kris</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>Pet Shop ni Kris</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="suggest.html">Suggest a Pet</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="form-card">
+
+            <h2>Suggest a Pet</h2>
+
+            <p>
+                Have a pet that you think should be included in our shop?
+                Send us your suggestion!
+            </p>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Your Suggestion</legend>
+
+                    <label for="pet-name">Pet Name:</label>
+                    <input
+                        type="text"
+                        id="pet-name"
+                        name="pet-name"
+                        required
+                    >
+
+                    <label for="category">Category:</label>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="mammal"
+                            name="category"
+                            value="mammal"
+                        >
+                        <label for="mammal">Mammal</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="reptile"
+                            name="category"
+                            value="reptile"
+                        >
+                        <label for="reptile">Reptile</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="arachnid"
+                            name="category"
+                            value="arachnid"
+                        >
+                        <label for="arachnid">Arachnid</label>
+                    </div>
+
+                    <label for="reason">What's good about it?</label>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="cute"
+                            name="reason"
+                            value="cute"
+                        >
+                        <label for="cute">Cute</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="interesting"
+                            name="reason"
+                            value="interesting"
+                        >
+                        <label for="interesting">Interesting</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="easy-care"
+                            name="reason"
+                            value="easy-care"
+                        >
+                        <label for="easy-care">Easy to care for</label>
+                    </div>
+
+                    <label for="email">Your Email:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+                    <label for="message">Message:</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Suggestion
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Pet Shop ni Kris. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

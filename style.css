@@ -1,291 +1,307 @@
+
 :root {
-    --black: #111111;
-    --dark: #1a1a1a;
-    --dark-green: #1f3027;
-    --green: #556b4d;
-    --dirty-white: #e5e0d3;
-    --beige: #c8c1af;
-    --gray: #4a4a4a;
-    --red: #8f3d36;
+    --brand: #355e3b;
+    --dark: #18221b;
+    --green: #6f8f72;
+    --light: #eef3e8;
+    --cream: #d9dfcf;
+    --card: #243126;
+    --accent: #b8a96a;
 }
 
-/* BASE STYLES */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 30px;
+    padding: 0;
+
     background-color: var(--dark);
-    color: var(--dirty-white);
+    color: var(--light);
+
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    max-width: 950px;
-    margin: 0 auto 40px;
-    padding: 35px 25px;
-    text-align: center;
-    background-color: var(--black);
-    border: 2px solid var(--green);
-    border-left: 8px solid var(--red);
+.site-header {
+    background-color: var(--brand);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 45px;
+
+    border-bottom: 4px solid var(--accent);
 }
 
-h1 {
-    margin: 0 0 10px;
-    color: var(--dirty-white);
-    font-size: 45px;
+
+/* PET SHOP NAME */
+
+.site-header h1 {
+    margin: 0;
+
+    color: var(--cream);
+
+    font-size: 32px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+
+    text-shadow: 2px 2px 0 #18221b;
 }
 
-header p {
-    color: var(--beige);
-}
+.site-header nav ul {
+    display: flex;
 
-/* NAVIGATION */
-nav {
-    margin-top: 25px;
-}
+    gap: 20px;
 
-nav ul {
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 5px;
+.site-header nav li {
+    display: block;
 }
 
-nav a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--dark-green);
-    color: var(--dirty-white);
-    border: 1px solid var(--green);
+.site-header nav a {
+    color: var(--cream);
+
     text-decoration: none;
+
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 17px;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: var(--red);
-    transform: rotate(-2deg);
+.site-header nav a:hover {
+    background-color: var(--accent);
+    color: var(--dark);
 }
 
-/* MAIN */
 main {
-    max-width: 950px;
-    margin: auto;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 35px 20px;
 }
 
+.intro {
+    text-align: center;
 
+    margin-bottom: 35px;
+}
 
-.product-card,
-article {
-    background-color: var(--black);
-    border-radius: 12px;
-    padding: 24px;
-    border-left: 8px solid var(--green);
+.intro h2 {
+    color: var(--cream);
+
+    font-size: 30px;
+}
+
+.intro p {
+    font-size: 17px;
+
+    color: var(--light);
+}
+
+.product-card {
+    background-color: var(--card);
+
+    color: var(--light);
+
+    padding: 25px;
+
     margin-bottom: 30px;
-    transition: 0.3s;
+
+    border: 2px solid var(--green);
+
+    border-radius: 12px;
+
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
 }
 
-/* PRODUCT CARD HOVER */
-.product-card:hover,
-article:hover {
-    border-left-color: var(--red);
-    transform: translateX(5px);
-    box-shadow: 8px 8px 0 var(--dark-green);
+.product-card:hover {
+    border-color: var(--accent);
+
+    transform: translateY(-3px);
 }
 
-/* PRODUCT NAMES */
+
+/* PRODUCT NAME */
+
 .product-card h2,
 .product-card h3,
 .product-card h4,
-.product-card h5,
-article h2,
-article h3,
-article h4,
-article h5 {
+.product-card h5 {
+    color: var(--cream);
+
     margin-top: 0;
-    color: var(--dirty-white);
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* PRODUCT DESCRIPTION */
-.product-card p,
-article p {
-    color: var(--beige);
+.product-card h2 {
+    font-size: 28px;
 }
 
-/* PRICE */
-.price {
-    color: var(--red);
-    font-size: 20px;
-    font-weight: bold;
+.product-card h3,
+.product-card h4,
+.product-card h5 {
+    font-size: 24px;
 }
 
-/* PRODUCT IMAGES */
-img {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 25px auto;
-    border: 3px solid var(--green);
-    filter: contrast(1.1) saturate(0.8);
+.product-card img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin: 20px auto 0;
+  border-radius: 10px;
 }
 
-/* PRODUCT BUTTON */
-.product-card a,
-article a {
-    display: inline-block;
-    padding: 12px 22px;
-    background-color: var(--dirty-white);
-    color: var(--black);
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+a {
+    color: var(--cream);
 }
 
-.product-card a:hover,
-article a:hover {
-    background-color: var(--red);
-    color: var(--dirty-white);
+.product-card a:hover {
+    color: var(--accent);
 }
 
+footer {
+    background-color: var(--brand);
 
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: var(--black);
-    border-radius: 12px;
-    border-left: 8px solid var(--green);
+    color: var(--cream);
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 3px solid var(--accent);
 }
-
-section h2 {
-    color: var(--dirty-white);
-    text-transform: uppercase;
-}
-
-
 
 form {
-    max-width: 850px;
-    margin: auto;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: var(--dark);
+
+    color: var(--light);
+
+    border: 2px solid var(--green);
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
 }
 
 fieldset {
-    margin-bottom: 25px;
-    padding: 25px;
-    background-color: var(--black);
     border: 2px solid var(--green);
-    border-radius: 12px;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    margin-bottom: 10px;
 }
 
 legend {
-    padding: 0 10px;
-    color: var(--dirty-white);
-    background-color: var(--dark);
+    color: var(--cream);
+
     font-weight: bold;
-    text-transform: uppercase;
+
+    padding: 0 8px;
 }
 
-/* LABELS */
-label {
-    display: block;
-    margin-top: 15px;
-    color: var(--beige);
-    font-weight: bold;
-}
-
-/* INPUTS AND TEXTAREA */
-input:not([type="radio"]):not([type="checkbox"]),
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 7px;
-    background-color: var(--dark);
-    color: var(--dirty-white);
-    border: 1px solid var(--gray);
-    border-radius: 6px;
-    font-family: Arial, sans-serif;
-}
-
-/* VISIBLE FOCUS STATE */
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 2px solid var(--red);
-    outline-offset: 2px;
-    border-color: var(--red);
-}
-
-/* RADIO AND CHECKBOX */
 input[type="radio"],
 input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
-    accent-color: var(--red);
+    accent-color: var(--accent);
+
+    margin-right: 5px;
 }
 
-/* SUBMIT BUTTON */
-button,
-input[type="submit"] {
-    width: auto;
-    padding: 12px 25px;
-    margin-top: 20px;
-    background-color: var(--red);
-    color: var(--dirty-white);
-    border: 2px solid var(--red);
-    border-radius: 6px;
-    cursor: pointer;
+button {
+    background-color: var(--brand);
+
+    color: var(--cream);
+
+    border: 2px solid var(--accent);
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
     font-weight: bold;
-    text-transform: uppercase;
+
+    cursor: pointer;
 }
 
-button:hover,
-input[type="submit"]:hover {
-    background-color: var(--black);
-    border-color: var(--dirty-white);
+button:hover {
+    background-color: var(--accent);
+
+    color: var(--dark);
 }
 
-/* FOOTER */
-footer {
-    max-width: 950px;
-    margin: 40px auto 0;
-    padding: 25px;
-    text-align: center;
-    background-color: var(--black);
-    border-top: 3px solid var(--red);
-    color: var(--beige);
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 3px solid var(--accent);
+
+    outline-offset: 2px;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-    body {
-        padding: 15px;
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 18px;
+
+        text-align: center;
+
+        padding: 25px 20px;
     }
 
-    h1 {
-        font-size: 32px;
+    .site-header nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
     }
 
-    nav li {
-        display: block;
+    .site-header h1 {
+        font-size: 28px;
     }
 
-    nav a {
-        width: 100%;
+    main {
+        padding: 25px 15px;
     }
+
 }

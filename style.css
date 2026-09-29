@@ -9,7 +9,7 @@
 }
 
 /* =========================
-   GENERAL
+   GENERAL BASE (MOBILE)
    ========================= */
 
 * {
@@ -30,71 +30,58 @@ body {
 }
 
 /* =========================
-   7.1 CSS GRID PAGE LAYOUT
+   BASE MOBILE LAYOUT
    ========================= */
 
+/* Mobile-first: single column layout, main before side */
 .page {
     min-height: 100vh;
-
     display: grid;
-
-    grid-template-columns: 220px 1fr;
-
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side main"
-        "foot foot";
-
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
 }
 
-/* =========================
-   HEADER
-   ========================= */
-
+/* Header (Mobile Base) */
 .site-header {
     grid-area: masthead;
-
     background: var(--brand);
-
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-
-    padding: 22px 45px;
-
+    gap: 15px;
+    padding: 20px;
     border-bottom: 4px solid var(--accent);
 }
 
 .site-header h1 {
     margin: 0;
-
     color: var(--cream);
-
-    font-size: 32px;
+    font-size: 26px;
     letter-spacing: 2px;
-
     text-shadow: 2px 2px 0 #18221b;
+    text-align: center;
 }
-
-/* Navigation */
 
 .site-header nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
     gap: 10px;
 }
 
 .site-header nav a {
     color: var(--cream);
     text-decoration: none;
-
     padding: 8px 12px;
-
     border: 1px solid transparent;
     border-radius: 6px;
-
     transition: 0.2s ease;
+    text-align: center;
 }
 
 .site-header nav a:hover {
@@ -102,43 +89,31 @@ body {
     background: var(--accent);
 }
 
-/* =========================
-   SIDEBAR
-   ========================= */
-
+/* Sidebar (Mobile Base) */
 .sidebar {
     grid-area: side;
-
     background: var(--card);
-
     padding: 20px;
-
     border: 1px solid var(--green);
     border-radius: 10px;
-
+    margin: 0 15px;
     align-self: start;
 }
 
 .sidebar h2 {
     margin-top: 0;
-
     color: var(--accent);
-
     font-size: 20px;
 }
 
 .sidebar a {
     display: block;
-
     color: var(--light);
     text-decoration: none;
-
     padding: 9px 12px;
     margin-bottom: 6px;
-
     border-left: 3px solid transparent;
     border-radius: 4px;
-
     transition: 0.2s ease;
 }
 
@@ -148,21 +123,15 @@ body {
     border-left-color: var(--accent);
 }
 
-/* =========================
-   MAIN CONTENT
-   ========================= */
-
+/* Main Content (Mobile Base) */
 .main-content {
     grid-area: main;
-
-    padding: 10px 20px 30px;
+    padding: 15px;
 }
 
 .main-content h2 {
     color: var(--cream);
-
     font-size: 28px;
-
     text-shadow: 1px 1px 0 #000;
 }
 
@@ -175,47 +144,29 @@ body {
 }
 
 /* =========================
-   PRODUCT CONTAINER
+   PRODUCT CONTAINER & CARD
    ========================= */
 
 .products {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
-
     margin-top: 25px;
 }
 
-/* =========================
-   PRODUCT CARD
-   ========================= */
-
 .product-card {
-    flex: 1 1 240px;
-
-    max-width: 350px;
-
+    width: 100%;
     background: var(--card);
-
     border: 1px solid var(--green);
     border-left: 4px solid var(--accent);
-
     border-radius: 10px;
-
     padding: 20px;
-
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .product-card h2 {
     color: var(--cream);
-
     font-size: 24px;
-
     margin-top: 10px;
 }
 
@@ -223,22 +174,14 @@ body {
     color: var(--light);
 }
 
-/* Product Images */
-
 .product-card img {
     display: block;
-
-    width: 250px;
-    height: 250px;
-
+    width: 220px;
+    height: 220px;
     max-width: 100%;
-
     object-fit: cover;
-
     margin: 0 auto 15px;
-
     border-radius: 8px;
-
     border: 2px solid var(--green);
 }
 
@@ -250,19 +193,12 @@ body {
 .view-detail,
 .order-button {
     display: inline-block;
-
     background: var(--brand);
-
     color: var(--cream);
-
     text-decoration: none;
-
     padding: 10px 18px;
-
     border: 1px solid var(--accent);
-
     border-radius: 6px;
-
     transition: 0.2s ease;
 }
 
@@ -274,38 +210,29 @@ body {
 }
 
 /* =========================
-   DETAIL PAGE
+   DETAIL & ABOUT SECTIONS
    ========================= */
 
-.detail-container {
+.detail-container,
+.about-section {
     max-width: 900px;
-
     margin: 0 auto;
-
     background: var(--card);
-
     border: 1px solid var(--green);
     border-left: 4px solid var(--accent);
-
     border-radius: 10px;
-
-    padding: 25px;
+    padding: 18px;
 }
 
-.detail-container img {
+.detail-container img,
+.about-section img {
     display: block;
-
     width: 300px;
     height: 300px;
-
     max-width: 100%;
-
     object-fit: cover;
-
     margin: 0 auto 20px;
-
     border-radius: 8px;
-
     border: 2px solid var(--green);
 }
 
@@ -315,66 +242,25 @@ body {
 
 table {
     width: 100%;
-
     border-collapse: collapse;
-
     margin: 20px 0;
-
     background: var(--dark);
 }
 
 th,
 td {
     border: 1px solid var(--green);
-
     padding: 12px;
-
     text-align: left;
 }
 
 th {
     background: var(--brand);
-
     color: var(--cream);
 }
 
 td {
     color: var(--light);
-}
-
-/* =========================
-   ABOUT SECTION
-   ========================= */
-
-.about-section {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    background: var(--card);
-
-    border-left: 4px solid var(--accent);
-
-    border-radius: 10px;
-
-    padding: 25px;
-}
-
-.about-section img {
-    display: block;
-
-    width: 300px;
-    height: 300px;
-
-    max-width: 100%;
-
-    object-fit: cover;
-
-    margin: 20px auto;
-
-    border-radius: 8px;
-
-    border: 2px solid var(--green);
 }
 
 /* =========================
@@ -383,39 +269,28 @@ td {
 
 form {
     max-width: 700px;
-
     margin: 0 auto;
-
     background: var(--card);
-
-    padding: 25px;
-
+    padding: 18px;
     border: 1px solid var(--green);
-
     border-left: 4px solid var(--accent);
-
     border-radius: 10px;
 }
 
 fieldset {
     border: 1px solid var(--green);
-
     border-radius: 8px;
-
     padding: 20px;
 }
 
 legend {
     color: var(--accent);
-
     font-weight: bold;
 }
 
 label {
     display: block;
-
     color: var(--cream);
-
     margin-top: 12px;
 }
 
@@ -423,23 +298,16 @@ input,
 textarea,
 select {
     width: 100%;
-
     padding: 10px;
-
     margin-top: 5px;
-
     background: var(--dark);
-
     color: var(--light);
-
     border: 1px solid var(--green);
-
     border-radius: 5px;
 }
 
 textarea {
     min-height: 120px;
-
     resize: vertical;
 }
 
@@ -447,7 +315,6 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-
     border-color: var(--accent);
 }
 
@@ -457,15 +324,10 @@ select:focus {
 
 .site-footer {
     grid-area: foot;
-
     background: var(--brand);
-
     color: var(--cream);
-
     text-align: center;
-
     padding: 20px;
-
     border-top: 4px solid var(--accent);
 }
 
@@ -474,84 +336,58 @@ select:focus {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   ENHANCEMENTS (TABLET & DESKTOP)
    ========================= */
 
-@media (max-width: 800px) {
-
-    .page {
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "masthead"
-            "side"
-            "main"
-            "foot";
-    }
-
-    .site-header {
-        flex-direction: column;
-
-        gap: 15px;
-
-        padding: 20px;
-    }
-
-    .site-header h1 {
-        font-size: 26px;
-
-        text-align: center;
-    }
-
+/* Small Screens / Mobile landscape enhancement */
+@media (min-width: 500px) {
     .site-header nav {
+        flex-direction: row;
         justify-content: center;
     }
 
-    .sidebar {
-        margin: 0 15px;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-
-    .products {
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .product-card {
-        width: 100%;
-
-        max-width: 500px;
-    }
-}
-
-/* =========================
-   SMALL MOBILE SCREENS
-   ========================= */
-
-@media (max-width: 500px) {
-
-    .site-header nav {
-        flex-direction: column;
-
-        width: 100%;
-    }
-
     .site-header nav a {
-        text-align: center;
+        text-align: left;
     }
 
     .product-card img {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
     }
 
     .detail-container,
     .about-section,
     form {
-        padding: 18px;
+        padding: 25px;
+    }
+}
+
+/* Desktop/Tablet Layout Enhancement */
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side main"
+            "foot foot";
+    }
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 22px 45px;
+    }
+
+    .site-header h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .sidebar {
+        margin: 0;
+    }
+
+    .main-content {
+        padding: 10px 20px 30px;
     }
 }

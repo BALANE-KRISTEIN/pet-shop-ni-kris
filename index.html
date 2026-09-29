@@ -1,184 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Pet Shop ni Kris</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- HEADER -->
+<div class="page">
 
     <header class="site-header">
-
         <h1>Pet Shop ni Kris</h1>
 
         <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-
-                <li>
-                    <a href="suggest.html">Suggest a Pet</a>
-                </li>
-
-            </ul>
-
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="suggest.html">Suggest a Pet</a>
         </nav>
-
     </header>
 
 
+    <aside class="sidebar">
+        <h2>Pet Categories</h2>
 
-    <!-- INTRODUCTION -->
+        <a href="#">Arachnids</a>
+        <a href="#">Reptiles</a>
+        <a href="#">Mammals</a>
+        <a href="#">Aquatic</a>
 
-    <main>
+        <h2>Shop</h2>
 
-        <section class="intro">
-
-            <h2>Welcome to Pet Shop ni Kris</h2>
-
-            <p>
-                This is a shop where you will find your unexpected pets.
-                We also offer and promote free adoptions.
-            </p>
-
-        </section>
+        <a href="order.html">Order Enquiry</a>
+    </aside>
 
 
+    <main class="main-content">
 
-        <!-- PRODUCT GRID -->
+        <h2>Welcome to Pet Shop ni Kris</h2>
 
-        <section class="product-grid">
+        <p>
+            This is a shop where you will find your unexpected pets.
+            We also offer and promote free adoptions.
+        </p>
 
-
-            <!-- JUMPING SPIDER -->
+        <section class="products">
 
             <article class="product-card">
+                <img src="Hello mun_____.jpg" alt="Jumping Spider">
 
                 <h2>Jumping Spider</h2>
 
-                <p class="price">
-                    P 900
-                </p>
+                <p>₱900</p>
 
                 <p>
-                    A Jumping Spider as your emotional support,
-                    he can be your companion.
+                    Your emotional support arachnid companion.
                 </p>
 
-                <img
-                    src="Hello mun_____.jpg"
-                    alt="Jumping Spider"
-                >
-
-                <p>
-                    <a href="products/jumping-spider.html" class="view-details">
-                        View details
-                    </a>
-                </p>
-
+                <a href="pets/jumping-spider.html" class="button">
+                    View Detail
+                </a>
             </article>
 
 
-
-            <!-- LION BEARDENT -->
-
             <article class="product-card">
+                <img src="GuieneLion.jpg" alt="Lion Bearded">
 
                 <h2>Lion Bearded</h2>
 
-                <p class="price">
-                    P 10,000
-                </p>
+                <p>₱10,000</p>
 
                 <p>
-                    A unique pet for animal lovers looking
-                    for something different.
+                    A half rodent, half feline animal
+                    that will scare you at first.
                 </p>
 
-                <img
-                    src="GuieneLion.jpg"
-                    alt="Lion Bearded pet"
-                >
-
-                <p>
-                    <a href="products/lion-beared.html" class="view-details">
-                        View Details
-                    </a>
-                </p>
-
+                <a href="pets/lion-bearded.html" class="button">
+                    View Detail
+                </a>
             </article>
-
-
-
-           
-
-            <article class="product-card">
-
-                <h2>Unknown</h2>
-
-                <p class="price">
-                    P FREE
-                </p>
-
-                <p>
-                    This is an unknown species. Please make sure
-                    you have a life insurance
-                </p>
-
-                <img
-                    src="Ano to.jpg"
-                    alt="Unknown"
-                >
-
-                <p>
-                    <a href="products/unknown.html" class="view-details">
-                        View Details
-                    </a>
-                </p>
-
-            </article>
-
 
         </section>
 
     </main>
 
 
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            &copy; 2026 Pet Shop ni Kris. All Rights Reserved.
-        </p>
-
+    <footer class="site-footer">
+        <p>&copy; 2026 Pet Shop ni Kris. All rights reserved.</p>
     </footer>
 
+</div>
 
 </body>
-
 </html>

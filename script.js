@@ -25,7 +25,51 @@ if (countDisplay) {
     countDisplay.textContent = runningCount;
 }
 
-// 6. Log at least three labelled values to the console
+
 console.log('Shop Name:', shopName);
 console.log('Current Year:', currentYear);
 console.log('Total Product Count:', runningCount);
+
+
+
+
+const stockCount = 5;
+let stockText = "";
+
+if (stockCount > 10) {
+    stockText = "In stock";
+} else if (stockCount >= 1) {
+    stockText = "Only a few left";
+} else {
+    stockText = "Sold out";
+}
+
+const stockElement = document.getElementById('stock-status');
+if (stockElement) {
+    stockElement.textContent = stockText;
+}
+
+
+
+const orderTotal = 1200; 
+const isMember = true;   
+
+
+const deliveryFee = (orderTotal >= 1000 && isMember === true) === true ? 0 : 150;
+const finalTotal = orderTotal + deliveryFee;
+
+const deliveryElement = document.getElementById('delivery-check');
+if (deliveryElement) {
+    deliveryElement.textContent = `P ${finalTotal} (Fee: P ${deliveryFee})`;
+}
+
+
+
+const isOpenToday = true; // Change to false to test "Closed today"
+
+const shopOpenResult = isOpenToday === true ? "Open today" : "Closed today";
+
+const shopStatusElement = document.getElementById('shop-status');
+if (shopStatusElement) {
+    shopStatusElement.textContent = shopOpenResult;
+}
